@@ -1,4 +1,4 @@
-package com.lihak.plugin.kakao;
+package com.reconers.cordova.kakao;
 
 import android.app.Activity;
 import android.content.Context;
