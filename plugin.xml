@@ -57,7 +57,66 @@
                 <param name="ios-package" value="KakaoTalk" />
             </feature>
         </config-file>
+		
+		<config-file target="*-Info.plist" parent="CFBundleURLTypes">
+			<array>
+				<dict>
+					<key>CFBundleURLSchemes</key>
+					<array>
+						<string>kakao$APP_ID</string>
+						<string>kakaokompassauth</string>
+						<string>storykompassauth</string>
+						<string>kakaolink</string>
+						<string>kakaotalk-4.5.0</string>
+						<string>kakaostory-2.9.0</string>
+					</array>
+				</dict>
+			</array>
+		</config-file>
 
+        <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+          <dict>
+            <key>NSExceptionDomains</key>
+			<dict>
+				<key>kakaocorp.com</key>
+				<dict>
+					<key>NSExceptionAllowsInsecureHTTPLoads</key>
+					<true/>
+					<key>NSExceptionRequiresForwardSecrecy</key>
+					<false/>
+					<key>NSIncludesSubdomains</key>
+					<true/>
+				</dict>
+				<key>kakao.com</key>
+				<dict>
+					<key>NSIncludesSubdomains</key>
+					<true/>
+					<key>NSExceptionRequiresForwardSecrecy</key>
+					<false/>
+					<key>NSExceptionAllowsInsecureHTTPLoads</key>
+					<true/>
+				</dict>
+				<key>kakao.co.kr</key>
+				<dict>
+					<key>NSIncludesSubdomains</key>
+					<true/>
+					<key>NSExceptionRequiresForwardSecrecy</key>
+					<false/>
+					<key>NSExceptionAllowsInsecureHTTPLoads</key>
+					<true/>
+				</dict>
+				<key>kakaocdn.net</key>
+				<dict>
+					<key>NSIncludesSubdomains</key>
+					<true/>
+					<key>NSExceptionRequiresForwardSecrecy</key>
+					<false/>
+					<key>NSExceptionAllowsInsecureHTTPLoads</key>
+					<true/>
+				</dict>
+			</dict>
+        </config-file>
+        
         <source-file src="src/ios/KakaoTalk.m" />
         <header-file src="src/ios/KakaoTalk.h" />
         <config-file target="*-Info.plist">
@@ -68,5 +127,8 @@
 				<array></array>
 			</dict>
 		</config-file>
+		
+        <framework src="src/ios/KakaoOpenSDK.framework" custom="true" />
+        
     </platform>
 </plugin>
