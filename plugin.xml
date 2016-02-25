@@ -16,6 +16,7 @@
     </js-module>
 
 	<preference name="KAKAO_APP_KEY" />
+	
 	<platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="KakaoTalk">
@@ -121,12 +122,8 @@
         <source-file src="src/ios/KakaoTalk.m" />
         <header-file src="src/ios/KakaoTalk.h" />
         <config-file target="*-Info.plist">
-			<dict>
-				<key>KAKAO_APP_KEY</key>
-				<string>$KAKAO_APP_KEY</string>
-				<key>Kits</key>
-				<array></array>
-			</dict>
+			<key>KAKAO_APP_KEY</key>
+			<string>$KAKAO_APP_KEY</string>
 		</config-file>
 		
         <framework src="src/ios/KakaoOpenSDK.framework" custom="true" />
