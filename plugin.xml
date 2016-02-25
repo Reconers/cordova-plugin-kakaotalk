@@ -61,6 +61,7 @@
 		
 		<config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
 			<array>
+				<string>kakao$KAKAO_APP_KEY</string>
 				<string>kakaokompassauth</string>
 				<string>storykompassauth</string>
 				<string>kakaolink</string>
