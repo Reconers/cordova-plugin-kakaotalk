@@ -121,11 +121,11 @@
         
         <source-file src="src/ios/KakaoTalk.m" />
         <header-file src="src/ios/KakaoTalk.h" />
-        <config-file target="*-Info.plist">
-			<key>KAKAO_APP_KEY</key>
-			<string>$KAKAO_APP_KEY</string>
-		</config-file>
-		
+        
+        <config-file target="*-Info.plist" parent="KAKAO_APP_KEY">
+            <string>$KAKAO_APP_KEY</string>
+        </config-file>
+        
         <framework src="src/ios/KakaoOpenSDK.framework" custom="true" />
         
     </platform>
