@@ -63,7 +63,7 @@
 				<dict>
 					<key>CFBundleURLSchemes</key>
 					<array>
-						<string>kakao$APP_ID</string>
+						<string>kakao$KAKAO_APP_KEY</string>
 						<string>kakaokompassauth</string>
 						<string>storykompassauth</string>
 						<string>kakaolink</string>
